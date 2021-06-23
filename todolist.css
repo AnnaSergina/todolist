@@ -1,0 +1,162 @@
+body {
+    margin: 50px;
+}
+
+button {
+	background-color: #ffffff;
+	border-radius: 4px;
+	border: 1px solid black;
+	display:inline-block;
+	cursor:pointer;
+	color: black;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 15px;
+	text-decoration:none;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+ul {
+    padding-left:  0;
+    margin: 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+#notebooksList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#notebookItem {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    grid-template-rows: repeat(4, 30px) auto;
+    column-gap: 5%;
+    row-gap: 10px;
+    grid-template-areas: 
+    "time deleteNotebookButton"
+    "dropdown dropdown"
+    "notebookName editNotebookButton"
+    "newTask addTaskButton"
+    "tasklist tasklist";
+
+    width: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 4px;
+	border: 1px solid black;
+}
+
+#notebookTime {
+    display: flex;
+    align-items: center;
+    grid-area: time;
+}
+
+#deleteNotebook {
+    grid-area: deleteNotebookButton;
+}
+
+#notebookName {
+    grid-area: notebookName;
+    font-size: large;
+    font-weight: bold;
+}
+
+#editNotebookButton {
+    grid-area: editNotebookButton;
+}
+
+#newtasktext {
+    grid-area: newTask;
+}
+
+#addTaskButton {
+    grid-area: addTaskButton;
+}
+
+#tasklist {
+    grid-area: tasklist;
+}
+
+#taskItem {
+    display: grid;
+    grid-template-columns: 5% 36% 25% 25%;
+    column-gap: 3%;
+    grid-template-areas: 
+    "checkbox newTask editTaskButton deleteTaskButton";
+}
+
+#checkbox {
+    grid-area: checkbox;
+}
+
+#newTask {
+    grid-area: newTask;
+    inline-size: 108px;
+    overflow-wrap: break-word;
+}
+
+#editTaskButton {
+    grid-area: editTaskButton;
+}
+
+#deleteTaskButton {
+grid-area: deleteTaskButton;
+}
+
+.editTask {
+    display: none;
+}
+
+.dropbtn {
+    cursor: pointer;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+    grid-area: dropdown;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.show {
+    display:inline;
+}
+
+#white {
+      width: 40px;
+      height: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+      background-color: white;
+}
+
+#gray {
+    width: 40px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: lightgray;
+}
+
+#blue {
+    width: 40px;
+    height: 30px;
+    background-color: lightblue;
+}
